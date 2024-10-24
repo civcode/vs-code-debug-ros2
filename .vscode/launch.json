@@ -1,0 +1,55 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+     {
+      "name": "Debug Catch2 tests",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/install/wn_obstacle_avoidance/lib/wn_obstacle_avoidance/wn_obstacle_avoidance_test",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "miDebuggerPath": "/usr/bin/gdb",
+      "preLaunchTask": "colcon build",
+      "logging": {
+          "trace": true, 
+          "engineLogging": true
+      }
+    },
+    {
+      "name": "Attach to ROS 2 Node",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "${workspaceFolder}/install/wn_obstacle_avoidance/lib/wn_obstacle_avoidance/wn_obstacle_avoidance",
+      "processId": "${command:pickProcess}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "preLaunchTask": "set_ptrace_scope",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "sourceFileMap": {
+        "/build": "${workspaceFolder}/build"
+      },
+      "logging": {
+        "trace": true,
+        "traceResponse": true,
+        "engineLogging": true
+      },
+    }
+  ]
+}
