@@ -1,6 +1,6 @@
 # VS Code Setup for ROS2 Node Debugging
 
-## How to debug a binary files
+## How to debug binary files
 This option is suitable for debugging programs that are started by executing the binary file directly.
 
 1. Open the launch.json and in the launch configuration "Debug Catch2 tests" set the variable "program" to the absolute path of the binary file.
