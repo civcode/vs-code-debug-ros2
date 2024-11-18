@@ -4,9 +4,10 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/install/wn_can_msgs/include/**",
-                "${workspaceFolder}/install/wn_localization_msgs/include/**",
-                "${workspaceFolder}/install/wn_obstacle_avoidance_msgs/include/**",
+                "${workspaceFolder}/install/*/include/**",
+                //"${workspaceFolder}/install/wn_can_msgs/include/**",
+                //"${workspaceFolder}/install/wn_localization_msgs/include/**",
+                //"${workspaceFolder}/install/wn_obstacle_avoidance_msgs/include/**",
                 "/opt/ros/jazzy/include/**",
                 "/usr/include/**"
             ],
